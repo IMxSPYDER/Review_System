@@ -1,0 +1,4 @@
+Approach,Accuracy (%),JSON Validity (%),MAE,±1 Accuracy (%)
+Approach 1 – Zero-Shot,61.24,64.5,0.442,95.35
+Approach 2 – Few-Shot,60.0,97.01,0.436,96.41
+Approach 3 – Structured Reasoning,65.0,99.5,0.385,96.5

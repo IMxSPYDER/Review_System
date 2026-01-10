@@ -1,13 +1,13 @@
 import { fetchReviews } from "@/lib/api"
 import { AdminDashboard } from "@/components/admin-dashboard"
 
-export default async function AdminPage() {
-  const reviews = await fetchReviews()
-
-  export const metadata = {
+export const metadata = {
   title: "FeedbackAI – AI Admin Panel",
   description: "Share feedback and get instant AI-powered analysis",
 }
+
+export default async function AdminPage() {
+  const reviews = await fetchReviews()
 
   // map backend → UI model
   const mappedReviews = reviews.map((r: any) => ({

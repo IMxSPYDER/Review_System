@@ -2,6 +2,11 @@ import Link from "next/link"
 import { FeedbackForm } from "@/components/feedback-form"
 import { Sparkles, ArrowRight } from "lucide-react"
 
+export const metadata = {
+  title: "FeedbackAI – AI Powered Feedback System",
+  description: "Share feedback and get instant AI-powered analysis",
+}
+
 export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background">

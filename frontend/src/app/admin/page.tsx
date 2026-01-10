@@ -4,6 +4,11 @@ import { AdminDashboard } from "@/components/admin-dashboard"
 export default async function AdminPage() {
   const reviews = await fetchReviews()
 
+  export const metadata = {
+  title: "FeedbackAI – AI Admin Panel",
+  description: "Share feedback and get instant AI-powered analysis",
+}
+
   // map backend → UI model
   const mappedReviews = reviews.map((r: any) => ({
     id: r._id,

@@ -21,14 +21,20 @@ export async function submitReview(data: {
   return res.json();
 }
 
-export async function fetchReviews(): Promise<Review[]> {
-  const res = await fetch(`${BASE_URL}/reviews`, {
-    cache: "no-store"
-  });
+export async function fetchReviews() {
+  try {
+    const res = await fetch(`${BASE_URL}/reviews`, {
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch reviews");
+    if (!res.ok) {
+      console.error("Backend error:", res.status);
+      return [];
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Fetch failed:", error);
+    return [];
   }
-
-  return res.json();
 }
